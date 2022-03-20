@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Loop</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <script>
+        const cars=["BMW","Benz","Range Rover","Audi"];
+        let text="";
+        const col=["blue","black","white","red"];
+        let clr="";
+        const fruits=["banana","orange","mango"];
+        let txt1="";
+        const person={
+            fn:"Neha",ln:"Jangid",age:"19"
+        };
+        let txt="";
+        for(
+            let i=0;i<cars.length;i++
+        )
+        {
+            text+=cars[i]+"<br>";
+            //text=text+cars[i]+"<br>"
+        }
+        for(
+            let j=0;j<col.length;j++
+        )
+        {
+            clr+=col[j]+"<br>";
+              //text=text+cars[i]+"<br>"
+        }
+        for(let x in person){
+            text+=person[x]+""; 
+        }
+        //for in used for only objects
+        for(let x of fruits){
+            text=+ x+"<br>";
+        }
+        //for of used for only arrays
+        document.getElementById("demo").innerHTML=text;
+        document.getElementById("demo1").innerHTML=clr; 
+        document.getElementById("demo2").innerHTML=txt;
+        document.getElementById("demo3").innerHTML=txt1;
+    </script>
+</body>
+</html>
